@@ -1,0 +1,128 @@
+//Index Styles
+@keyframes waves
+ from
+  transform: scale(1)
+ to
+  transform: scale(1.1)
+
+@keyframes rock
+ from
+  transform: rotate(-2deg)
+ to
+  transform: rotate(2deg)
+
+@keyframes move
+ from
+  left: 100vw
+ to
+  left: 16.5vw
+
+
+
+.waves
+ animation: waves 1.5s ease-in-out
+ animation-direction: alternate
+ animation-iteration-count: 6
+
+.rock
+ animation: rock 1s ease-in-out infinite, move 10s ease-in 1
+ animation-direction: alternate
+
+
+section
+ width: 100vw
+ height: 100vh
+
+.sectionIcon
+ position: absolute
+ top: 5vh
+ left: 16.5vw
+ width: 80px
+ height: 80px
+ z-index: 5
+ opacity: 0.5
+ transition: transform 2s ease
+
+
+
+
+.content_wrapper
+ padding: 2.5% 6% 2.5% 5%
+
+
+.header
+ font-family: $font-stack
+ font-weight: 400
+ font-size: 2em
+ color: $dark-blue
+ border-top: 2px solid grey
+ border-bottom: 2px solid grey
+ 
+.grid-1
+ width: 100vw
+.grid-2
+ width: 50vw
+.grid-3
+ width: 31vw
+.grid-4
+ width: 25vw
+.grid-5
+.grid-6
+.grid-7
+.grid-8
+
+@import mainsection
+@import biosection
+@import fishingseasons
+@import seasonssection
+@import tripsection
+@import fleetsection
+@import pricingsection
+@import form
+    
+.clear-bar 
+ position: fixed
+ top: 20%
+ right: 0
+ height: 380px
+ width: 80px
+ background-color: rgba(255,255,255,.9)
+ opacity: 0
+ transition: opacity 500ms ease
+ padding-top: 12px
+ border-radius: 10px 0px 0px 10px
+ z-index: 100
+ ul
+  padding-left: 20px
+  li
+   list-style-type: none
+   img 
+    width: 50px
+    height: 50px
+    display: block
+    opacity: 0.5
+    transition: transform 1s ease
+   img:hover
+    transform: scale(1.1)
+   img.pricing, img.contact
+    width: 40px
+    height: 40px
+    margin-left: 5%
+    margin-bottom: 15%
+    padding-bottom: 15%
+   img.fishing
+    margin-top: 15%
+   img.active
+    opacity: 1
+
+img.bk-top
+ margin-left: 30%
+ transition: transform 1s ease
+ opacity: 0.5
+img.bk-top:hover
+ transform: scale(1.1)
+  
+
+.clear-bar.display-trans 
+ opacity: 1
+    

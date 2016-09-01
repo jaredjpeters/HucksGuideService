@@ -1,0 +1,51 @@
+// main_section styles
+@import logo
+@import nav
+@keyframes slide-left
+
+ 20% 
+  transform: translateX(-100vw)
+ 40% 
+  transform: translateX(-100vw)
+ 60% 
+  transform: translateX(-100vw)
+ 80% 
+  transform: translateX(-100vw)
+ 100% 
+  transform: translateX(-100vw)
+ 
+
+#image_wrapper
+ width: 500vw
+ height: 100vh
+ animation: 8s slide-left infinite
+ animation-delay: 8s
+ img[id^=slide]
+  width: 20%
+  height: 100%
+  display: inline
+  background-image: url(../images/openocean.jpg)
+  background-size: cover
+  background-position: top
+  float: left
+
+
+
+
+.c_container
+ width: 30%
+ height: 60px
+ position: fixed
+ z-index: 3
+  
+ 
+.c_container
+ bottom: 2%
+ right: 1%
+ padding-top: 7px
+.c_container img
+ width: 40px
+ height: 40px
+ float: right
+ margin-right: 10px
+

@@ -1,0 +1,797 @@
+* {
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+body {
+  margin: 0;
+  overflow-x: hidden; }
+
+@keyframes waves {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+@keyframes rock {
+  from {
+    transform: rotate(-2deg); }
+  to {
+    transform: rotate(2deg); } }
+@keyframes move {
+  from {
+    left: 100vw; }
+  to {
+    left: 16.5vw; } }
+.waves {
+  animation: waves 1.5s ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: 6; }
+
+.rock {
+  animation: rock 1s ease-in-out infinite, move 10s ease-in 1;
+  animation-direction: alternate; }
+
+section {
+  width: 100vw;
+  height: 100vh; }
+
+.sectionIcon {
+  position: absolute;
+  top: 5vh;
+  left: 16.5vw;
+  width: 80px;
+  height: 80px;
+  z-index: 5;
+  opacity: 0.5;
+  transition: transform 2s ease; }
+
+.content_wrapper {
+  padding: 2.5% 6% 2.5% 5%; }
+
+.header {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 400;
+  font-size: 2em;
+  color: #0e3251;
+  border-top: 2px solid grey;
+  border-bottom: 2px solid grey; }
+
+.grid-1 {
+  width: 100vw; }
+
+.grid-2 {
+  width: 50vw; }
+
+.grid-3 {
+  width: 31vw; }
+
+.grid-4 {
+  width: 25vw; }
+
+#logo_container {
+  width: 100vw;
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  top: 30px;
+  left: 39%;
+  z-index: 3; }
+
+#logo {
+  width: auto;
+  height: 150px;
+  margin: auto;
+  position: absolute; }
+
+@keyframes sway {
+  from {
+    transform: rotate(-10deg); }
+  to {
+    transform: rotate(10deg); } }
+nav.js {
+  position: absolute;
+  top: 115px;
+  left: 40%;
+  background-color: rgba(0, 0, 0, 0.2);
+  height: 280px;
+  border-radius: 10px 10px 10px 10px;
+  border: 2.5px solid white; }
+  nav.js ul {
+    list-style-type: none;
+    width: 258.5px;
+    margin-top: 60px;
+    padding-left: 0;
+    font-family: Roboto Condensed, Helvetica;
+    font-weight: 400; }
+    nav.js ul li {
+      display: block;
+      margin-top: 5%;
+      padding-left: 35%;
+      width: 100%;
+      text-decoration: none;
+      color: white;
+      transition: opacity 1s ease; }
+      nav.js ul li a {
+        text-decoration: none;
+        color: white;
+        transition: opacity 1s ease; }
+    nav.js ul li:hover {
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      border-top: 2px solid rgba(255, 255, 255, 0.5); }
+    nav.js ul li:hover a {
+      color: white;
+      opacity: 0.5; }
+
+.display-none {
+  display: none; }
+
+#circle {
+  position: absolute;
+  top: 165px;
+  left: 47%;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 2.5px solid white; }
+  #circle img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 1px;
+    left: 3px;
+    transition: 2s ease-in-out;
+    animation: sway 2s infinite;
+    animation-direction: alternate; }
+
+@keyframes slide-left {
+  20% {
+    transform: translateX(-100vw); }
+  40% {
+    transform: translateX(-100vw); }
+  60% {
+    transform: translateX(-100vw); }
+  80% {
+    transform: translateX(-100vw); }
+  100% {
+    transform: translateX(-100vw); } }
+#image_wrapper {
+  width: 500vw;
+  height: 100vh;
+  animation: 8s slide-left infinite;
+  animation-delay: 8s; }
+  #image_wrapper img[id^=slide] {
+    width: 20%;
+    height: 100%;
+    display: inline;
+    background-image: url(../images/openocean.jpg);
+    background-size: cover;
+    background-position: top;
+    float: left; }
+
+.c_container {
+  width: 30%;
+  height: 60px;
+  position: fixed;
+  z-index: 3; }
+
+.c_container {
+  bottom: 2%;
+  right: 1%;
+  padding-top: 7px; }
+
+.c_container img {
+  width: 40px;
+  height: 40px;
+  float: right;
+  margin-right: 10px; }
+
+@keyframes pulse-r {
+  0% {
+    width: 0vw; }
+  100% {
+    width: 100vw; } }
+@keyframes rise {
+  from {
+    transform: rotateX(90deg);
+    transform-origin: bottom; }
+  to {
+    transform: rotateX(0deg); } }
+@keyframes fade-in {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.rotate {
+  transform: rotate(360deg); }
+
+#bio_section {
+  position: relative;
+  background-image: url(../images/openocean.jpg);
+  background-size: cover;
+  background-position: bottom; }
+
+.text_container {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  padding-left: 20px;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  margin-top: 10px; }
+
+#bio_section .header {
+  width: 11vw;
+  margin-right: 0px; }
+
+.bioText {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  color: black; }
+  .bioText span {
+    font-weight: 400; }
+
+#safetyLogos {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  background-image: url(../images/sandbanner.jpg);
+  background-size: fill;
+  background-position: left;
+  z-index: 4; }
+
+.bryanGuide {
+  position: absolute;
+  bottom: 15px;
+  right: 100px;
+  height: 600px;
+  width: auto;
+  animation: rise 1.2s ease-in-out 1;
+  z-index: 3; }
+
+img#riseUp {
+  position: absolute;
+  bottom: 15px;
+  right: 100px;
+  height: 600px;
+  width: auto; }
+
+.fade-in {
+  animation: fade-in 1.2s ease-in-out 1; }
+
+.entryMsg {
+  position: absolute;
+  top: 20%;
+  left: 6.5%;
+  color: white;
+  font-family: Roboto Condensed, Helvetica;
+  font-size: 2em; }
+
+#season_widget {
+  width: 415px;
+  height: 86px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px 10px 0 0;
+  z-index: 2; }
+
+.fix_pos {
+  position: fixed;
+  bottom: 0;
+  left: 33.5%; }
+
+.ab_pos {
+  position: absolute;
+  top: 222%;
+  left: 33.5%; }
+
+.season_containers {
+  width: 15px;
+  height: 15px;
+  border: 3px solid grey;
+  display: block;
+  position: relative;
+  margin-left: 14%;
+  margin-top: 5%;
+  float: left; }
+
+.green {
+  background-color: green; }
+
+h4 {
+  font-family: Roboto Condensed, Helvetica;
+  display: block; }
+
+#sumChinook {
+  left: -5px; }
+
+#fallChinook {
+  left: -2px; }
+
+#winSteelhead {
+  left: -8px; }
+
+#sprChinook {
+  left: -6px; }
+
+#bottomFish {
+  left: -1px; }
+
+#contextMsg {
+  font-family: Roboto Condensed, Helvetica;
+  font-size: 1em;
+  font-weight: 400;
+  color: grey;
+  margin-left: 33%;
+  margin-bottom: 0%;
+  margin-top: 1%;
+  height: 5px;
+  z-index: 3; }
+
+.open {
+  color: #0e3251; }
+
+.seasonTitle {
+  position: absolute;
+  bottom: -45px;
+  left: -8px;
+  color: grey;
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 0.7em; }
+
+@keyframes pulse {
+  from {
+    opacity: 0.8; }
+  to {
+    opacity: 1; } }
+#seasons_section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  padding-top: 120px;
+  margin-top: 10%;
+  background-image: url(../images/oregonwatermark.png);
+  background-repeat: no-repeat; }
+  #seasons_section .content_wrapper {
+    padding-top: 0;
+    padding-left: 15%; }
+    #seasons_section .content_wrapper h4 {
+      margin-top: 0;
+      color: #0e3251; }
+    #seasons_section .content_wrapper .col-2, #seasons_section .content_wrapper .col-1 {
+      display: inline-block;
+      float: left;
+      height: 100%;
+      width: 45%;
+      margin-right: 5%; }
+      #seasons_section .content_wrapper .col-2 div#sumChinookJs, #seasons_section .content_wrapper .col-1 div#sumChinookJs {
+        background-image: url(../images/openoceansum.jpg);
+        background-size: cover;
+        background-position: bottom; }
+      #seasons_section .content_wrapper .col-2 div#fallChinookJs, #seasons_section .content_wrapper .col-1 div#fallChinookJs {
+        background-image: url(../images/openoceanfall.jpg);
+        background-size: cover;
+        background-position: bottom; }
+      #seasons_section .content_wrapper .col-2 div#sprChinookJs, #seasons_section .content_wrapper .col-1 div#sprChinookJs {
+        background-image: url(../images/openoceanspr.jpg);
+        background-size: cover;
+        background-position: bottom; }
+      #seasons_section .content_wrapper .col-2 div#winSteelheadJs, #seasons_section .content_wrapper .col-1 div#winSteelheadJs {
+        background-image: url(../images/openoceanwin.jpg);
+        background-size: cover;
+        background-position: bottom; }
+      #seasons_section .content_wrapper .col-2 div#bottomFishJs, #seasons_section .content_wrapper .col-1 div#bottomFishJs {
+        background-image: url(../images/openocean.jpg);
+        background-size: cover;
+        background-position: bottom; }
+
+#seasons_section h3 {
+  font-family: Roboto Condensed, Helvetica;
+  text-align: center;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px; }
+
+input[type='checkbox'] {
+  margin-right: 10px; }
+
+.seasons_text {
+  font-family: Roboto Condensed, Helvetica;
+  margin-top: 1px; }
+  .seasons_text span {
+    font-size: 1.2em;
+    font-weight: 300;
+    margin-top: 1px; }
+  .seasons_text div {
+    font-size: 3em;
+    font-weight: 400; }
+
+.text {
+  font-size: 1em;
+  font-family: Roboto Condensed, Helvetica; }
+
+div.OPEN, div.CLOSED {
+  letter-spacing: -1px;
+  margin-bottom: 2px; }
+
+.OPEN {
+  color: #0e3251;
+  height: 50px; }
+
+div.TODAY {
+  color: #0e3251;
+  height: 50px;
+  font-size: 2.5em; }
+
+.CLOSED {
+  color: #727272;
+  height: 50px;
+  opacity: 0.5; }
+
+.seasonHeading {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 400;
+  height: 75px;
+  font-size: 2.5em;
+  line-height: 2.6em;
+  line-height: 2.6em;
+  color: black;
+  margin: 0; }
+
+.pulse {
+  animation: pulse 1s infinite;
+  animation-direction: alternate; }
+
+.season_wrapper_js {
+  width: 500px;
+  height: 100px;
+  margin-bottom: 10px;
+  font-size: 3em;
+  color: white;
+  font-family: Roboto Condensed, Helvetica;
+  padding-left: 100px;
+  padding-top: 20px;
+  border-radius: 10px; }
+
+.season_wrapper_js:hover {
+  cursor: pointer; }
+
+#trip_section {
+  position: relative;
+  background-image: url(../images/wilson-banner.jpg);
+  background-size: cover;
+  margin-top: 10%; }
+  #trip_section .content_wrapper {
+    padding-left: 15%; }
+    #trip_section .content_wrapper .text_container {
+      padding-top: 0%;
+      width: 95%;
+      background-color: rgba(255, 255, 255, 0.7); }
+  #trip_section .sectionIcon {
+    left: 73%; }
+
+#trip_section .header {
+  width: 10vw;
+  margin-left: 65vw; }
+
+#trip_section .col-1 {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  float: left;
+  display: inline-block;
+  margin-left: 0%;
+  margin-right: 3vw; }
+  #trip_section .col-1 span {
+    font-weight: 400; }
+
+#trip_section .col-2 {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.6em;
+  display: inline-block; }
+  #trip_section .col-2 span {
+    font-weight: 400; }
+
+#fishLicense {
+  position: absolute;
+  top: 220px;
+  right: 16.5%;
+  height: 120px; }
+
+.background_wrapTrip {
+  width: 100vw;
+  height: 100vh;
+  background-color: #cccccc; }
+
+a#checklist {
+  text-decoration: none; }
+
+a:hover {
+  cursor: pointer; }
+
+a #download {
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 15%;
+  font-family: Roboto Condensed, Helvetica;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  font-weight: 300;
+  background-color: #0e3251;
+  color: white;
+  border: none;
+  transition: transform 1s ease; }
+
+a #download:hover {
+  cursor: pointer;
+  transform: scale(1.01); }
+
+a #download:focus {
+  outline: 0; }
+
+#ChecklistIcon {
+  height: 100px;
+  position: absolute;
+  bottom: 20%;
+  right: 17.5%; }
+
+#fleet_section {
+  position: relative; }
+  #fleet_section .header {
+    width: 90vw; }
+
+.fleetText {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 0.9em;
+  line-height: 1.2em;
+  display: inline-block;
+  float: left;
+  margin-right: 3%; }
+  .fleetText span {
+    font-weight: 400; }
+
+.fleetText.col-3 {
+  margin-top: 4vh; }
+
+#pricing_section {
+  background-color: #dddddd;
+  height: 50vh;
+  position: relative; }
+  #pricing_section .header {
+    width: 8vw;
+    margin-left: 3vw; }
+
+.pricingText {
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.5em; }
+  .pricingText span {
+    font-weight: 400; }
+
+#dollarSign {
+  position: absolute;
+  top: -13%;
+  left: 5vw;
+  margin-bottom: 0;
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 400;
+  font-size: 5em;
+  color: #0e3251;
+  opacity: 0.5; }
+
+#pricing_section .col-1 {
+  margin-left: 3vw;
+  display: inline-block;
+  float: left; }
+
+#pricing_section .col-2 {
+  display: inline-block;
+  margin-left: 2vw; }
+
+#dayTrip {
+  position: absolute;
+  top: 10vh;
+  left: 70vw;
+  font-family: Roboto Condensed, Helvetica; }
+
+#contact_us {
+  background-color: #2f2f2f;
+  width: 100vw;
+  height: 100vh;
+  position: relative; }
+  #contact_us div h1.header {
+    font-family: Roboto Condensed, Helvetica;
+    color: white;
+    border: none; }
+
+form {
+  width: 25vw;
+  margin: auto;
+  position: absolute;
+  top: 70px;
+  left: 37%; }
+
+form p {
+  margin-top: 0; }
+
+label {
+  font-family: Roboto Condensed, Helvetica;
+  color: white;
+  font-size: 1em; }
+
+label[for=message] {
+  margin-bottom: 10px; }
+
+input[type=text] {
+  background-color: darkgray;
+  width: 100%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  color: white;
+  outline-color: darkgray;
+  border-radius: 10px;
+  margin-top: 5px; }
+
+input[type=text]:hover {
+  opacity: 0.5; }
+
+input[type=submit] {
+  border-radius: 10px;
+  font-family: Roboto Condensed, Helvetica;
+  margin-left: 38%; }
+
+textarea {
+  outline-color: darkgray;
+  font-family: Roboto Condensed, Helvetica;
+  color: white;
+  width: 100%;
+  height: 100px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: dimgray;
+  resize: none;
+  border-radius: 10px; }
+
+input.error {
+  margin-bottom: 5px; }
+
+label.error {
+  color: orange;
+  margin-top: 5px; }
+
+input[type=text]::placeholder {
+  color: black;
+  font-family: Roboto Condensed, Helvetica; }
+
+textarea::placeholder {
+  font-family: Roboto Condensed, Helvetica; }
+
+textarea {
+  margin-top: 5px; }
+
+footer {
+  width: 100vw;
+  height: 80px;
+  background-color: #0e3251;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0px;
+  border-bottom: 5px white solid; }
+
+.d_container {
+  height: 60px;
+  position: absolute;
+  width: 30%;
+  bottom: 0%;
+  left: 1%; }
+
+#designed_by {
+  display: inline-block;
+  height: 50px;
+  width: 100px;
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: white;
+  margin-top: 0px;
+  position: absolute;
+  top: 0; }
+
+#my_logo {
+  display: inline-block;
+  height: 40px;
+  margin-top: 15px; }
+
+#copyInfo {
+  position: absolute;
+  bottom: 3%;
+  left: 43%;
+  width: auto;
+  color: white;
+  padding-bottom: 10px;
+  display: inline;
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 0.9em; }
+
+#willieLogo {
+  position: absolute;
+  bottom: 13%;
+  right: 18%;
+  width: 150px; }
+
+#poweredBy {
+  position: absolute;
+  bottom: 20%;
+  right: 27%;
+  width: 80px;
+  font-family: Roboto Condensed, Helvetica;
+  font-weight: 300;
+  font-size: 0.7em;
+  color: white; }
+
+.clear-bar {
+  position: fixed;
+  top: 20%;
+  right: 0;
+  height: 380px;
+  width: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  padding-top: 12px;
+  border-radius: 10px 0px 0px 10px;
+  z-index: 100; }
+  .clear-bar ul {
+    padding-left: 20px; }
+    .clear-bar ul li {
+      list-style-type: none; }
+      .clear-bar ul li img {
+        width: 50px;
+        height: 50px;
+        display: block;
+        opacity: 0.5;
+        transition: transform 1s ease; }
+      .clear-bar ul li img:hover {
+        transform: scale(1.1); }
+      .clear-bar ul li img.pricing, .clear-bar ul li img.contact {
+        width: 40px;
+        height: 40px;
+        margin-left: 5%;
+        margin-bottom: 15%;
+        padding-bottom: 15%; }
+      .clear-bar ul li img.fishing {
+        margin-top: 15%; }
+      .clear-bar ul li img.active {
+        opacity: 1; }
+
+img.bk-top {
+  margin-left: 30%;
+  transition: transform 1s ease;
+  opacity: 0.5; }
+
+img.bk-top:hover {
+  transform: scale(1.1); }
+
+.clear-bar.display-trans {
+  opacity: 1; }
+
+/*# sourceMappingURL=styles.css.map */
